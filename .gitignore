@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Made on each PC by install.ps1 (the shortcut holds that PC's folder paths)
+*.lnk
+graftsnip.ico
+
+# Local files that should never be shared
+.env
+.env.*
+*.log
