@@ -18,13 +18,19 @@ Part of the [Grafthouse](https://github.com/grafthouse) family of tools.
 
 GraftSnip works entirely offline. It makes no network calls, and text recognition uses the OCR engine built into Windows. Settings and a log file are kept in `%APPDATA%\GraftSnip`, and your snips stay where you save them.
 
+## Download
+
+Get the Windows installer from the [GraftSnip page](https://grafthouse.vercel.app/projects/graftsnip) or the [Grafthouse releases](https://github.com/grafthouse/releases/releases). It installs for your user account only, so no admin rights are needed, and it can be removed from Settings > Apps.
+
+The installer is not code-signed yet, so Windows SmartScreen may show "Windows protected your PC". Choose **More info**, then **Run anyway**.
+
 ## Requirements
 
 - Windows 10 or 11
-- Python 3.15 or later
 - An OCR language pack for your Windows display language (only for the text features; most Windows installs already have one)
+- To run from source: Python 3.15 or later
 
-## Install
+## Run from source
 
 ```powershell
 git clone https://github.com/grafthouse/graftsnip.git
@@ -45,6 +51,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File install.ps1
 ```
 
 Press the shortcut, drag around what you want, then annotate in the editor. The editor's help panel lists every keyboard shortcut.
+
+## Build the installer
+
+Needs [Inno Setup 6](https://jrsoftware.org/isinfo.php) (`winget install JRSoftware.InnoSetup`).
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File packaging\build.ps1
+```
+
+It freezes the app with PyInstaller in its own build environment, then writes `packaging\out\GraftSnip-<version>-windows-x64-setup.exe`.
 
 ## Tests
 

@@ -38,6 +38,9 @@ log = logging.getLogger("graftsnip")
 
 
 def _launch_command() -> str:
+    # Installed build (PyInstaller): GraftSnip.exe is the program itself.
+    if getattr(sys, "frozen", False):
+        return f'"{sys.executable}" --tray'
     exe = Path(sys.executable)
     pythonw = exe.with_name("pythonw.exe")
     script = Path(__file__).resolve().parent.parent / "GraftSnip.pyw"
