@@ -55,4 +55,5 @@ Press the shortcut, drag around what you want, then annotate in the editor. The 
 
 ## Licence
 
-The code is MIT licensed. The GraftSnip and Grafthouse names and logos (`graftsnip/assets/` and the app icon built from them) are not, and all rights are reserved. See [LICENSE](LICENSE) for what you may do with them.
+The code is MIT licensed. The GraftSnip and Grafthouse names and logos (`graftsnip/assets/` and the app icon built from them) are not, and all rights are reserved. See [LICENSE](LICENSE) for the code and
+[TRADEMARKS.md](TRADEMARKS.md) for what you may do with the names and logos.
