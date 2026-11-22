@@ -13,3 +13,8 @@ graftsnip.ico
 .env
 .env.*
 *.log
+
+# Installer build (packaging\build.ps1)
+packaging/.buildvenv/
+packaging/work/
+packaging/out/
